@@ -7,8 +7,8 @@
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-#Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \

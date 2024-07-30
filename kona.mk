@@ -10,6 +10,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+#Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -287,10 +290,16 @@ PRODUCT_PACKAGES += \
 # Input
 PRODUCT_PACKAGES += \
     Xiaomi_Smart_Pen_Keyboard.kl \
-    kona-mtp-snd-card_Button_Jack.kl
+    kona-mtp-snd-card_Button_Jack.kl \
+    uinput-fortsense.kl \
+    uinput-fpc.kl \
+    uinput-goodix.kl
 
 PRODUCT_PACKAGES += \
-    Xiaomi_Keyboard.idc
+    Xiaomi_Keyboard.idc \
+    uinput-fortsense.idc \
+    uinput-fpc.idc \
+    uinput-goodix.idc
 
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true

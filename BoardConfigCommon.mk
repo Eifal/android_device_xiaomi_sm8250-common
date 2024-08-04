@@ -113,9 +113,8 @@ KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 LLVM_IAS=1
 TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
-# Kernel Toolchain
-KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
-KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
+# Kernel-Toolchain
+override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
